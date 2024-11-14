@@ -2,8 +2,6 @@ package com.nttdata.p1.customer_service.controller;
 
 import com.nttdata.p1.customer_service.model.Customer;
 import com.nttdata.p1.customer_service.service.CustomerService;
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
