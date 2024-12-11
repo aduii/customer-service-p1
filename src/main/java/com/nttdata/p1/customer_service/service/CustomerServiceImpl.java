@@ -23,6 +23,11 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public Mono<Customer> getCustomer(String id) {
+        return customerRepository.getCustomer(id);
+    }
+
+    @Override
     public Mono<Customer> updateCustomer(String id, Customer customer) {
         return customerRepository.updateCustomer(id, customer);
     }

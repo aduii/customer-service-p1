@@ -23,6 +23,11 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
     @Override
+    public Mono<Customer> getCustomer(String id) {
+        return crudRepository.findById(id);
+    }
+
+    @Override
     public Mono<Customer> updateCustomer(String id, Customer customer) {
         return crudRepository.findById(id)
                 .flatMap(existinCustomer -> {

@@ -28,6 +28,11 @@ public class CustomerServiceController {
         return customerService.getAllCustomers();
     }
 
+    @GetMapping("/{id}")
+    public Mono<Customer> getCustomer(@PathVariable String id){
+        return customerService.getCustomer(id);
+    }
+
     @PutMapping("/{id}")
     public Mono<Customer> updateCustomer(
             @PathVariable String id,
